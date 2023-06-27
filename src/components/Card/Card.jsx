@@ -6,15 +6,15 @@ export default function Card({name, status, species, gender, origin, image, onCl
    return (
       <div className= {style.characterBox}>
          <img src={image} alt= {`Foto de ${name}`}/>
-
+         <h2>{name}</h2>
          <CardInfo 
          name = {name} 
          status={status}
          species={species}
          gender={gender}
          origin={origin}
+         onClose={onClose}
          />
-         <button onClick={onClose}>Eliminar</button>
       </div>
    );
 }

@@ -1,7 +1,12 @@
 .charactersBox{
-    background-color: rgba(12, 94, 18, 0.2);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 90rem;
+    background-color: rgb(240, 240, 227, 0.9);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    justify-items: center;
+    width: 80%;
+    
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }

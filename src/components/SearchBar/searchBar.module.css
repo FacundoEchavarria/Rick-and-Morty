@@ -6,17 +6,21 @@
 .barraBusqueda input{
     border: none;
     border-radius: 30px;
-    width: 100%;
+    padding: 0 20px;
+    width: 75%;
     height: 40%;
     margin-bottom: 1rem;
+    font-size: 20px;
+    margin-right: 2rem;
 }
 .barraBusqueda button{
     border: none;
     border-radius: 30px;
     width: 20%;
-    height: 30%;
+    height: 40%;
+    background-color: rgb(240, 240, 227);
     transition: background-color 0.2s ease-in-out;
     &:hover{
-        background-color: green;
+        background-color: greenyellow;
     }
 }
