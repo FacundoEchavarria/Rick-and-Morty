@@ -1,0 +1,7 @@
+.charactersBox{
+    background-color: rgba(12, 94, 18, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90rem;
+}

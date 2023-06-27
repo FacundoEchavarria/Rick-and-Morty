@@ -1,0 +1,16 @@
+.characterInfo {
+    color: white;
+    background-color: rgba(12, 12, 12, 0.5);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+} 
+.characterInfo h2, h3 {
+    border: 1px greenyellow solid;
+    height: 100%;
+} 
+.characterInfo h3 {
+    grid-column: 1/3;
+} 

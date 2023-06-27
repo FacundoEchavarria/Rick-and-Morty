@@ -1,0 +1,22 @@
+.barraBusqueda{
+    margin: 2rem;
+    width: 60%;
+    height: 5rem;
+}
+.barraBusqueda input{
+    border: none;
+    border-radius: 30px;
+    width: 100%;
+    height: 40%;
+    margin-bottom: 1rem;
+}
+.barraBusqueda button{
+    border: none;
+    border-radius: 30px;
+    width: 20%;
+    height: 30%;
+    transition: background-color 0.2s ease-in-out;
+    &:hover{
+        background-color: green;
+    }
+}
