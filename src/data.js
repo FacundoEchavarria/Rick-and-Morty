@@ -72,4 +72,16 @@ export default [
       },
       image: 'https://rickandmortyapi.com/api/character/avatar/5.jpeg',
    },
+   {
+      id: 6,
+      name: 'Lionel Messi',
+      status: 'Alive',
+      species: 'Dios',
+      gender: 'Male',
+      origin: {
+         name: 'Unkown',
+         url: 'https://rickandmortyapi.com/api/location/20',
+      },
+      image: 'https://media.tycsports.com/files/2023/02/10/532928/lionel-messi_1440x810_wmk.webp',
+   },
 ];

@@ -1,0 +1,27 @@
+@font-face {
+   font-family:'RickAndMortyFont';
+   src: url(./multimedia/get_schwifty.ttf);
+}
+
+.App {
+   min-height: 100vh;
+   margin: 0;
+   background-color: #000000;
+   background-image: url('https://images.alphacoders.com/876/876589.jpg');
+   background-attachment: fixed;
+   background-size: cover;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.titulo{
+   font-size: 60px;
+   font-family: 'RickAndMortyFont';
+   color: greenyellow;
+}
+.autor{
+   font-family: 'RickAndMortyFont';
+   font-size: 26px;
+   color: white;
+}

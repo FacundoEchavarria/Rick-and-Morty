@@ -3,11 +3,11 @@
 }
 .characterBox {
     position: relative;
-    background-color: rgb(4, 168, 4);
+    background-color: greenyellow;
     margin: 30px;
-    width: 50%;
+    width: 20rem;
     height: 20rem;
-    border: 3px black solid;
+    border: 3px greenyellow solid;
     border-radius: 20px;
     transition: 0.3s ease-in-out;
 
@@ -33,7 +33,7 @@
 
 }
 h2{
-    background-color: rgba(104, 255, 62, 0.8);
+    background-color: greenyellow;
     position: absolute;
     bottom: 0;
     padding: 3px;
@@ -42,4 +42,49 @@ h2{
 
 }
 
+.characterInfo {
+    color: white;
+    background-color: rgba(12, 12, 12, 0.7);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    border-radius: 18px;
 
+    transition: 0.5s ease-in-out;
+
+}
+
+.characterInfo p {
+    border-bottom: 1px greenyellow solid;
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.characterInfo button{
+    background-color: greenyellow;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 22px;
+    transition: background-color 0.2s ease-in-out;
+
+
+    &:hover{
+        background-color: red;
+        cursor: pointer;
+    }
+}
+.characterInfo .noBoder{
+    border:none;
+}
