@@ -1,0 +1,33 @@
+
+.moreInfo{
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 80%;
+    min-height: 60vh;
+    border-radius: 30px;
+    border: greenyellow 3px solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.imgCharacter{
+    border-radius:50%;
+    width: 25%;
+    height: auto;
+    border: greenyellow 3px solid;
+}
+.moreInfoBox{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.moreInfoBox p{
+    width: 100%;
+    text-align: left;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.moreInfoBox p b{
+    color: greenyellow;
+}

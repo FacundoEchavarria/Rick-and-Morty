@@ -7,7 +7,7 @@ function SearchBar({onSearch}) {
 const [id, setId] = useState('');
 
 const handleChange = (event) =>{
-   setId(event.target.value)
+   setId(event.target.value);
 }
 const botonRandom = () =>{
    return Math.floor((Math.random() * 826) + 1);
@@ -17,7 +17,7 @@ const botonRandom = () =>{
 return (
    <div className={style.barraBusqueda}>
          <input type='search' value={id} onChange={handleChange}/>
-         <button onClick = {() => onSearch(id)}>Agregar</button>
+         <button onClick = {() => {onSearch(id); setId('')}}>Agregar</button>
          <button onClick = {() => onSearch(botonRandom())}>Random</button>
       </div>
    );

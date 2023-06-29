@@ -1,0 +1,7 @@
+.errorBox{
+    background-color: red;
+    color: white;
+    min-height: 75vh;
+    width: 80%;
+    font-size: 70px;
+}

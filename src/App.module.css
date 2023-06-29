@@ -10,6 +10,7 @@
    background-image: url('https://images.alphacoders.com/876/876589.jpg');
    background-attachment: fixed;
    background-size: cover;
+   background-position: center;
    text-align: center;
    display: flex;
    flex-direction: column;

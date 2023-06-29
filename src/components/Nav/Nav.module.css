@@ -4,3 +4,25 @@
     justify-content: center;
     align-items: center;
 }
+.botonNav{
+    border: none;
+    margin: 1rem;
+    width: 7%;
+    height: 40%;
+    background-color: rgb(240, 240, 227);
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover{
+        background-color: greenyellow;
+        cursor: pointer;
+    }
+
+}
+.botonNav button{
+    background: none;
+    border: none;
+    font-size: 22px;
+    &:hover{
+        cursor: pointer;
+    }
+}
