@@ -1,0 +1,100 @@
+.loginBox {
+    color: white;
+    background-image: url('https://images5.alphacoders.com/876/876590.png');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loginBox form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(221, 227, 238);
+    width: 25%;
+    height: 65vh;
+    border: 3px rgb(134, 199, 36) solid;
+    border-radius: 30px;
+}
+.loginBox form img{
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px rgb(134, 199, 36) solid;
+    margin: 10px 0;
+}
+.loginBox form hr{
+    width: 100%;
+    height: 2px;
+    background-color: rgb(134, 199, 36);
+    border:none;
+}
+.loginBox form div{
+    width: 100%;
+    font-family: 'LemonMilk';
+}
+
+.loginInfo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    margin-top: 20px;
+}
+.loginInfo label{
+    margin-left: 10px;
+    color: rgb(52, 53, 70);
+    height: 100%;
+    width: 30%;
+    text-align: left;
+}
+.loginInfo div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    height: 100%;
+}
+.loginInfo >div> span{
+    font-size: 16px;
+    color: red;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+}
+.loginInfo input{
+    width: 70%;
+    border: none;
+    height: 2rem;
+    margin-right: 10px;
+    padding-left: 10px;
+    background-color: rgb(212, 213, 231);
+    caret-color: greenyellow;
+    font-size: 18px;
+    font-weight: 700;
+
+    &:focus{
+        outline: none;
+        outline: 1px rgb(134, 199, 36) solid;
+        background-color: rgb(194, 195, 211);
+    }
+}
+
+.loginBox form > input{
+    margin-bottom: 10px;
+    background-color: rgb(134, 199, 36);
+    width: 20%;
+    height: 15rem;
+    border: none;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 16px;
+
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(160, 236, 46);
+    }
+}

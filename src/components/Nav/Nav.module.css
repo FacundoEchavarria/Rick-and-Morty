@@ -1,4 +1,9 @@
 .navBox{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.navBoxLinks{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -26,3 +31,15 @@
         cursor: pointer;
     }
 }
+
+.titulo{
+    font-size: 60px;
+    font-family: 'RickAndMortyFont';
+    color: greenyellow;
+ }
+ .autor{
+    font-family: 'RickAndMortyFont';
+    font-size: 26px;
+    color: white;
+ }
+ 

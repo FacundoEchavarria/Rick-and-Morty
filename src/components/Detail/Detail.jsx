@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import style from './Deatil.module.css'
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Error404 from "../notFound/NotFound";
 
 
 function Detail(props){
@@ -22,9 +23,7 @@ function Detail(props){
 
     if(error){
         return (
-            <div>
-                <p>no hay personaje</p>
-            </div>
+            <Error404/>
         )
     }
     return(

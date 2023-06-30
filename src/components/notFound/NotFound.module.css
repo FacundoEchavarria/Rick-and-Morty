@@ -1,7 +1,47 @@
+@font-face {
+    font-family:'LemonMilk';
+    src: url(../../multimedia/LEMONMILK-Medium.otf);
+ }
 .errorBox{
-    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    background-color: rgb(38, 34, 52);
     color: white;
-    min-height: 75vh;
-    width: 80%;
-    font-size: 70px;
+    display: flex;
+    flex-direction: column;
 }
+.errorImageBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15rem;
+    font-family: 'LemonMilk';
+    
+}
+
+.errorTextBox h3{
+    font-size: 24px;
+    margin: 10px;
+}
+.errorTextBox p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.errorLink button{
+    background-color: rgb(85, 76, 117);
+    width: 8rem;
+    height: 2rem;
+    color: white;
+    border: none;
+    outline: none;
+    
+    &:hover{
+        cursor: pointer;
+        border: 2px white solid;
+    }
+}
+

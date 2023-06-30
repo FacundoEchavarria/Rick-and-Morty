@@ -1,17 +1,38 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import styles from './App.module.css'
-import Cards from './components/Cards/Cards.jsx';
-import Nav from './components/Nav/Nav';
 import About from './components/about/about';
 import Detail from './components/Detail/Detail';
+import Form from './components/Form/Form';
+import Home from './components/Home/Home';
+import Nav from './components/Nav/Nav';
 import Error404 from './components/notFound/NotFound';
-import { Route, Routes, useNavigate } from 'react-router-dom';
-
 
 function App() {
 
    const [characters, setCharacters] = useState([]);
+   const [access, setAccess] = useState(false);
+
+   const navigate = useNavigate()
+   const EMAIL = 'facundo@gm.com'
+   const PASSWORD = 'boca10'
+
+   const login = (userData) =>{
+      if (userData.password === PASSWORD && userData.email === EMAIL) {
+         setAccess(true);
+         navigate('/home');
+      }else{
+         alert('Los datos son incorerctos')
+      }
+   }
+   const logout = () =>{
+         setAccess(false);
+         navigate('/');
+   }
+   useEffect(() => {
+      !access && navigate('/');
+   }, [access]);
 
    const onSearch = (id) =>{
       let repeat = true;
@@ -34,40 +55,27 @@ function App() {
       setCharacters(characters.filter(elem => elem.id !== parseInt(id)))
    }
 
-   function NotFoundRedirect() {
-      const navigate = useNavigate();
-
-      useEffect(() => {
-         navigate('/notFound');
-      }, [navigate]);
-   }
+   let location = useLocation()
 
    return (
 
       
    <div className={styles.App}>
-      <h1 className={styles.titulo}>Rick and Morty</h1>
-      <p className={styles.autor}>By Facundo Echavarria</p>
-      <Nav onSearch={onSearch}/>
+
+      {location.pathname === '/' ? null : <Nav onSearch={onSearch} logout={logout}/> }
       
       <Routes>
-         <Route path='/home' element={
-            <Cards
-            characters = {characters}
-            onClose = {onClose}
-            />
-         }/>
-         <Route path='/' element={
-            <Cards
-            
-            characters = {characters}
-            onClose = {onClose}
-            />
-         }/>
+         <Route path='/' element={<Form login = {login}/>}/>
          <Route path='/about' element={<About/>}/>
          <Route path='/detail/:id' element={<Detail/>}/>
-         <Route path='*' element={<NotFoundRedirect />}/>
+         <Route path='/home' element={
+            <Home
+            characters = {characters}
+            onClose = {onClose}
+            />
+         }/>
          <Route path='/notFound' element={<Error404 />}/>
+         <Route path='*' element={<Error404 />}/>
       </Routes>
    </div>
 

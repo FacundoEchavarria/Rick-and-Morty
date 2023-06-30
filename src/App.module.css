@@ -3,6 +3,7 @@
    src: url(./multimedia/get_schwifty.ttf);
 }
 
+
 .App {
    min-height: 100vh;
    margin: 0;
@@ -15,14 +16,4 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-}
-.titulo{
-   font-size: 60px;
-   font-family: 'RickAndMortyFont';
-   color: greenyellow;
-}
-.autor{
-   font-family: 'RickAndMortyFont';
-   font-size: 26px;
-   color: white;
 }
