@@ -8,11 +8,15 @@ import Form from './components/Form/Form';
 import Home from './components/Home/Home';
 import Nav from './components/Nav/Nav';
 import Error404 from './components/notFound/NotFound';
+import Favorites from './components/Favorites/favorites';
+import { useDispatch } from 'react-redux';
+import { removeFav } from './redux/actions';
 
 function App() {
 
    const [characters, setCharacters] = useState([]);
    const [access, setAccess] = useState(false);
+   const dispatch = useDispatch()
 
    const navigate = useNavigate()
    const EMAIL = 'facundo@gm.com'
@@ -53,6 +57,7 @@ function App() {
    }
    const onClose = (id) =>{
       setCharacters(characters.filter(elem => elem.id !== parseInt(id)))
+      dispatch(removeFav(id))
    }
 
    let location = useLocation()
@@ -62,12 +67,13 @@ function App() {
       
    <div className={styles.App}>
 
-      {location.pathname === '/' ? null : <Nav onSearch={onSearch} logout={logout}/> }
+      {(location.pathname === '/' || location.pathname === '/notFound') ? null : <Nav onSearch={onSearch} logout={logout}/> }
       
       <Routes>
          <Route path='/' element={<Form login = {login}/>}/>
          <Route path='/about' element={<About/>}/>
          <Route path='/detail/:id' element={<Detail/>}/>
+         <Route path='/favorites' element={<Favorites/>}/>
          <Route path='/home' element={
             <Home
             characters = {characters}

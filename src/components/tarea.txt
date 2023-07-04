@@ -1,6 +1,4 @@
-ejercicios extras de routing y form
-
-
+Ver como se usa fetch y axios
 
 estilos de about y navlinks 
 boton scroll barra de scroll

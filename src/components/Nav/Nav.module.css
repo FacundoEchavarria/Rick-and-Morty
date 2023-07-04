@@ -1,7 +1,20 @@
+
 .navBox{
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+nav{
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 3px white solid;
+    height: 10vh;
+    width: 100%;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 10;
 }
 .navBoxLinks{
     width: 100%;
@@ -10,15 +23,21 @@
     align-items: center;
 }
 .botonNav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     border: none;
     margin: 1rem;
     width: 7%;
     height: 40%;
+    font-size: 22px;
     background-color: rgb(240, 240, 227);
     transition: background-color 0.2s ease-in-out;
+    border-radius: 30px;
 
     &:hover{
-        background-color: greenyellow;
+       outline: 3px greenyellow solid;
         cursor: pointer;
     }
 
@@ -36,6 +55,7 @@
     font-size: 60px;
     font-family: 'RickAndMortyFont';
     color: greenyellow;
+    padding-top: 15vh;
  }
  .autor{
     font-family: 'RickAndMortyFont';
