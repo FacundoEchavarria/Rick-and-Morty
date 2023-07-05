@@ -1,4 +1,8 @@
 Ver como se usa fetch y axios
+mover el access a redux
+tarea extra de react-redux
+
+Migrar el detail a un estado global
 
 estilos de about y navlinks 
 boton scroll barra de scroll

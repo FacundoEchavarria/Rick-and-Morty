@@ -54,7 +54,7 @@ function Card({id ,name, status, species, gender, origin, image, onClose}) {
             <button onClick={() => onClose(id)}>DELETE</button>
             {
                isFav ? (
-                  <button onClick={handleFavorite} className={style.favortiteStar}><FontAwesomeIcon icon={faStar} /></button>
+                  <button onClick={handleFavorite} ><FontAwesomeIcon className={style.favortiteStar} icon={faStar} /></button>
                ) : (
                   <button onClick={handleFavorite}><FontAwesomeIcon icon={regularStar} /></button>
                )

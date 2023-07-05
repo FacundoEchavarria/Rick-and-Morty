@@ -15,7 +15,10 @@
         scale: 1.04;
     }
     &:hover div{
-        display:grid;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
     &:hover h2{
         display:none;
@@ -72,7 +75,8 @@ h2{
     justify-content: center;
 } 
 .characterInfo button{
-    background-color: greenyellow;
+    background-color: rgb(125, 124, 124);
+    color: white;
     border: none;
     padding: 10px;
     border-radius: 20px;
@@ -81,12 +85,18 @@ h2{
 
 
     &:hover{
-        background-color: red;
+        background-color: greenyellow;
         cursor: pointer;
+        color: black;
+    }
+    &:hover .favortiteStar{
+        color: black;
     }
 }
 .characterInfo .noBoder{
     border:none;
 }
 
-
+.favortiteStar{
+    color: greenyellow;
+}
