@@ -23,4 +23,4 @@ http.createServer((req, res) =>{
         res.end(JSON.stringify(character[0]))
     }
 
-}).listen(3001, 'localhost')
+}).listen(3001, 'localhost') 
