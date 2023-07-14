@@ -19,16 +19,15 @@ function App() {
    const dispatch = useDispatch()
 
    const navigate = useNavigate()
-   const EMAIL = 'facundo@gm.com'
-   const PASSWORD = 'boca10'
 
-   const login = (userData) =>{
-      if (userData.password === PASSWORD && userData.email === EMAIL) {
-         setAccess(true);
-         navigate('/home');
-      }else{
-         alert('Los datos son incorerctos')
-      }
+   function login(userData) {
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+         const { access } = data;
+         setAccess(data);
+         access && navigate('/home');
+      });
    }
    const logout = () =>{
          setAccess(false);
@@ -42,7 +41,7 @@ function App() {
    const onSearch = (id) =>{
       let repeat = true;
       characters.forEach(elem => {
-         if(elem.id === parseInt(id)){
+         if(elem.id == id){
             repeat=false;
          }
       })
@@ -57,7 +56,7 @@ function App() {
       }else alert('Este Personaje esta repetido')
    }
    const onClose = (id) =>{
-      setCharacters(characters.filter(elem => elem.id !== parseInt(id)))
+      setCharacters(characters.filter(elem => elem.id !== id))
       dispatch(removeFav(id))
    }
 

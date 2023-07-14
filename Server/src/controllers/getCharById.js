@@ -2,7 +2,8 @@ const axios = require('axios')
 const URL = "https://rickandmortyapi.com/api/character/"
 
 const getCharById = (req, res) =>{
-    axios(URL + req.params.id)
+    const {id} = req.params
+    axios(`${URL}/${id}`)
         .then((response)=>{
             const data = response.data
             if(data.error){

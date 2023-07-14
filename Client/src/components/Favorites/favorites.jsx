@@ -40,16 +40,16 @@ const Favorites = ({ myFavorites }) =>{
             <div className= {style.charactersBox}>
                 {myFavorites?.map((elem) => (
                     <Card
-                    key = {elem.id}
-                    id = {elem.id}
-                    name={elem.name}
-                    status={elem.status}
-                    species={elem.species}
-                    gender={elem.gender}
-                    origin={elem.origin.name}
-                    image={elem.image}
+                    key = {elem?.id}
+                    id = {elem?.id}
+                    name={elem?.name}
+                    status={elem?.status}
+                    species={elem?.species}
+                    gender={elem?.gender}
+                    origin={elem?.origin?.name}
+                    image={elem?.image}
                     onClose={() => {
-                        dispatch(removeFav(elem.id))
+                        dispatch(removeFav(elem?.id))
                         }}
                     />
                 ))}

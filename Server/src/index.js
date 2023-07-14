@@ -1,8 +1,9 @@
 const express = require('express')
 const server = express()
 const PORT = 3001
-const routes = require('./routes/index')
+const router = require('./routes/index')
 
+server.use(express.json())
 server.listen(PORT, ()=>{
     console.log('Server listen in port' + PORT);
 })
@@ -19,11 +20,7 @@ server.use((req, res, next) => {
     );
     next();
 });
-server.use(express.json())
-server.use('/rickandmorty', routes.getCharByIdRouter)
-server.use('/rickandmorty', routes.logInRouter)
-server.use('/rickandmorty', routes.postFavRouter)
-server.use('/rickandmorty', routes.deleteFavRouter)
+server.use('/rickandmorty', router)
 
 // var http = require('http');
 // var getCharById = require('./controllers/getCharById');

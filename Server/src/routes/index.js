@@ -7,15 +7,11 @@ const getCharByIdRouter = express.Router()
 const logInRouter = express.Router()
 const deleteFavRouter = express.Router()
 const postFavRouter = express.Router()
+const router = express.Router()
 
-getCharByIdRouter.get('/character/:id', getCharById)
-logInRouter.get('/login', logIn)
-postFavRouter.post('/fav', postFav)
-deleteFavRouter.delete('/fav/:id', deleteFav)
+router.get('/character/:id', getCharById)
+router.get('/login', logIn)
+router.post('/fav', postFav)
+router.delete('/fav/:id', deleteFav)
 
-module.exports = {
-    getCharByIdRouter,
-    logInRouter,
-    deleteFavRouter,
-    postFavRouter
-};
+module.exports = router;
