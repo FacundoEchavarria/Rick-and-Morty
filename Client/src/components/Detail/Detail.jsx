@@ -34,7 +34,7 @@ function Detail(props){
                 <p><b>Status:</b> &nbsp;{character.status}</p>
                 <p><b>specie</b>: &nbsp;{character.species}</p>
                 <p><b>gender:</b> &nbsp;{character.gender}</p>
-                <p><b>origin:</b> &nbsp;{character.origin?.name}</p>
+                <p><b>origin:</b> &nbsp;{character.origin}</p>
             </div>
 
         </div>  
