@@ -17,17 +17,19 @@ function App() {
    const [characters, setCharacters] = useState([]);
    const [access, setAccess] = useState(false);
    const dispatch = useDispatch()
-
    const navigate = useNavigate()
 
-   function login(userData) {
+   async function login(userData) {
       const { email, password } = userData;
       const URL = 'http://localhost:3001/rickandmorty/login/';
-      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
-         const { access } = data;
-         setAccess(data);
+      try {
+         const response = await axios(URL + `?email=${email}&password=${password}`)
+         const { access } = response.data;
+         setAccess(response.data);
          access && navigate('/home');
-      });
+      } catch (error) {
+         alert('Datos incorrectos')
+      }
    }
    const logout = () =>{
          setAccess(false);
@@ -38,7 +40,7 @@ function App() {
    // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [access]);
 
-   const onSearch = (id) =>{
+   const onSearch = async (id) =>{
       let repeat = true;
       characters.forEach(elem => {
          if(elem.id == id){
@@ -46,13 +48,15 @@ function App() {
          }
       })
       if(repeat){
-         axios(`http://localhost:3001/rickandmorty/character/${id}`)
-         .then(({ data }) => {
-            if (data.name) {
-               setCharacters((oldChars) => [...oldChars, data]);
-            } 
-         })
-            .catch(error => alert('¡No hay personajes con este ID!'));
+         try {
+            const response = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
+            const data = response.data
+               if (data.name) {
+                  setCharacters((oldChars) => [...oldChars, data]);
+               } 
+         } catch (error) {
+            alert('¡No hay personajes con este ID!')
+         }
       }else alert('Este Personaje esta repetido')
    }
    const onClose = (id) =>{
