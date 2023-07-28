@@ -28,9 +28,19 @@ function Card({id ,name, status, species, gender, origin, image, onClose}) {
          dispatch(removeFav(id))
       }else{
          setIsFav(true)
+         console.log({
+            id : parseInt(id),
+            name,
+            status,
+            species,
+            gender,
+            origin,
+            image,
+            onClose
+         });
          dispatch(
             addFav({
-               id,
+               id : parseInt(id),
                name,
                status,
                species,

@@ -23,7 +23,7 @@ function App() {
       const { email, password } = userData;
       const URL = 'http://localhost:3001/rickandmorty/login/';
       try {
-         const response = await axios(URL + `?email=${email}&password=${password}`)
+         const response = await axios(URL + `?email=${email}&password=${password}&name=facundo`)
          const { access } = response.data;
          setAccess(response.data);
          access && navigate('/home');
